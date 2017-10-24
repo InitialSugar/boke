@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>博客后台管理</title>
+	<link rel="icon" href="../images/icon.ico">
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/bac.css">
+    <link rel="stylesheet" type="text/css" href="../css/baccon.css">
+</head>
+<body>
+<!--后台显示banner-->
+<div class="bacban">
+    <div class="top"></div>
+</div>
+<!--后台显示mclassdle-->
+<div class="bacmid">
+    <div class="bacinfo">
+        <div class="bactit"><h2>新建内容</h2></div>
+        <div class="newcon">
+            <div class="newtitle">标题：<input type="text" name="newtitle" placeholder="请输入你的文章标题"></div>
+            <div class="newcontent"><textarea name="newcontent" placeholder="请输入你的文章内容"></textarea></div>
+        </div>
+        <div class="butt">
+                <input type="submit" name="giveup" value="放弃" onClick="javascript:history.back(-1);">
+                <input type="submit" name="sure" value="新建" onclick="alert('新建成功')">
+        </div>
+    </div>
+</div>
+</body>
+</html>

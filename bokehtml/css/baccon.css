@@ -1,0 +1,110 @@
+
+/*添加用户*/
+.bacinfo{
+	width: 1030px;
+	height: 470px;
+	margin-top: 5px;
+	background: #dfbf95;
+	border-radius: 10px;
+	opacity: 0.85;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+}
+.person{
+	width: 980px;
+	height: 500px;
+	margin: 50px auto;
+}
+.infohead{
+	width: 250px;
+	height: 250px;
+	float: left;
+	margin: 18px 5px 0 150px;
+	border-right: 26px dotted #ffffff;
+}
+.infohead img{
+	width: 200px;
+	height: 200px;
+	border-radius: 100px;
+	margin-top: 25px;
+}
+.infohead img:hover{
+	width: 190px;
+	height: 190px;
+	border: 5px solid #a45b00;
+}
+.infolist{
+	float: left;
+	height:270px;
+	width: 375px;
+}
+.infolist table{
+	height:270px;
+	width: 375px;
+	margin-left: 10px;
+}
+.infolist table tr td{
+	height:52px;
+	margin: 0;
+	padding: 0;
+}
+.infolist input{
+	background: #ffffff;
+	width: 300px;
+	height: 25px;
+	color: #888;
+	margin-left: 0px;
+}
+h6{
+	font-size: 20px;
+	font-weight: normal;
+}
+.butt{
+	float: left;
+	width: 600px;
+	margin-left:260px;
+}
+.sexchoice{
+	font-size: 16px;
+	font-weight: bolder;
+	height: 20px;
+	padding: -5px 0 0 0px;
+	line-height: 20px;
+}
+.infolist div>input{
+	width: 15px;
+	height: 15px;
+	margin:0 5px 0 40px;
+}
+.butt input{
+	width: 140px;
+	height:35px;
+	margin:30px 40px;
+	border-radius: 10px;
+	color: #ffffff;
+	background: #c07d36;
+	border:1px solid #c2c2c2;
+}
+/*新建内容*/
+.newtitle{
+	width: 950px;
+	height: 40px;
+	margin: 10px 0 0px 55px;
+	line-height: 20px;
+	font-size: 18px;
+}
+.newtitle input{
+	width: 860px;
+	border-radius: 5px;
+	height: 30px;
+	border: none;
+	padding-left: 10px;
+
+}
+.newcontent textarea{
+	width: 903px;
+	height: 300px;
+	padding:10px 0 0 20px;
+	border-radius: 5px;
+	margin: 0 0 0 55px;
+}

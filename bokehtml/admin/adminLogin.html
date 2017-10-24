@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>欢迎登录博客后台管理</title>
+	<link rel="icon" href="../images/icon.ico">
+	<link rel="stylesheet" type="text/css" href="../css/bac.css">
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+</head>
+<style type="text/css">
+    body{
+        background: #5e99e2;
+    }
+</style>
+<body>
+    <div class="adminlog">
+        <div class="adminlogtit">
+	        <img src="../images/logo.png">
+	        <div class="adminwel">
+		        <h5>欢 迎 登 录 博 客 管 理 后 台</h5>
+		        <h6>Welcome to The Blog Background Management</h6>
+	        </div>
+        </div>
+        <input type="text" name="" id="adminUserId" placeholder="请输入你的ID账号">
+        <input type="password" name="" id="adminUserPwd" placeholder="请输入你的登录密码">
+        <button id="adminlogbtn">登&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;录</button>
+        <div class="goreg">还没有账号？去<a href="adminregister.html">注册</a></div>
+    </div>
+
+    <script type="text/javascript">
+        var adminUserId=document.getElementById('adminUserId');
+        var adminUserPwd=document.getElementById('adminUserPwd');
+        var adminlogbtn=document.getElementById('adminlogbtn');
+
+        adminlogbtn.onclick=function() {
+            localStorage.setItem('adminUserId',adminUserId.value);
+            localStorage.setItem('adminUserPwd',adminUserPwd.value);
+            var adminUser={
+                adminUserId:adminUserId.value,
+                adminUserPwd:adminUserPwd.value
+            };
+             
+            var xhr2=new XMLHttpRequest();
+            xhr2.open('POST','/adminlogin');
+            xhr2.setRequestHeader('Content-Type','application/json');
+            xhr2.send(JSON.stringify(adminUser));
+
+            xhr2.onreadystatechange=function(){
+                if(xhr2.readyState===4 && xhr2.status===200){
+                    var adminlogmes=xhr2.responseText;
+                    console.log(JSON.parse(adminlogmes));
+                    if(JSON.parse(adminlogmes).code==100){
+                        alert('登录成功。');
+                        window.location='adminmanage.html?_id='+JSON.parse(adminlogmes).msg;
+                    }else if (JSON.parse(adminlogmes).code==102) {
+                        alert('密码输入错误，请重新输入。');
+                    }else{
+                        alert('抱歉，该账号不存在，请确认你的账号输入是否正确。');
+                    }
+                }
+                
+            }
+        }
+    </script>
+</body>
+</html>

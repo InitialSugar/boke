@@ -1,0 +1,262 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+body{
+	background: #e9e9e9;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	line-height: 24px;
+}
+input{
+	background: #ffffff;
+}
+a{
+	text-decoration: none;
+	color: #000000;
+}
+ul{
+	list-style: none;
+}
+a:hover{
+	color: #5184c0;
+	cursor: pointer;
+}
+input:hover{
+	cursor: pointer;
+}
+button:hover{
+	cursor: pointer;
+}
+ul li:hover{
+	cursor: pointer;
+}
+/*后台banner*/
+.bacban{
+	width: 100%;
+	height: 250px;
+}
+.top{
+	width: 1030px;
+	height: 250px;
+	margin: 0 auto;
+	background: url('../images/mgbg.png');
+}
+.top input{
+	float: right;
+	width: 50px;
+	height: 18px;
+	font-size: 12px;
+	border: 1px solid #c0a59c;
+	border-radius: 5px;
+	background: #784401;
+	color: white;
+	margin:20px 40px 0 0;
+} 
+#yourname{
+	float: left;
+	width: 200px;
+	height: 18px;
+	font-size: 12px;
+	color: white;
+	margin:15px 0px 0 720px;
+}
+/*后台middle*/
+.bacmid{
+	margin-top:5px;
+	margin: 0 auto;
+	width:1030px;
+}
+/*管理员登录页面*/
+.adminlog{
+	width: 500px;
+	height: 320px;
+	top: 0px;
+	bottom: 0px;
+	left: 0;
+	right: 0;
+	position: absolute;
+	margin:auto;
+	border-radius: 10px;
+	background: #e9e9e9;
+	padding:30px 0  0 50px;
+}
+.adminlogtit{
+	width: 400px;
+	height: 80px;
+	margin:10px 0 0 30px;
+}
+.adminlogtit img{
+	width: 68px;
+	height: 80px;
+	float: left;
+}
+.adminwel{
+    width: 332px;
+	height: 80px;
+	float: left;
+	font-weight: bolder;
+	text-align: center;
+}
+.adminwel h5{
+	margin-top: 15px;
+	color: white;
+	font-size: 24px;
+	height: 24px;
+	width: 332px;
+	text-shadow: 2px 2px 5px  #3671c2;
+}
+.adminwel h6{
+	color: #3671c2;
+	font-size: 12.5px;
+	margin-top: 15px;
+	width: 332px;
+	height: 24px;
+}
+.adminlog input{
+	width: 370px;
+	height: 40px;
+	border-radius: 10px;
+	border:none;
+	margin: 10px 0 0 35px;
+	padding-left: 10px;
+}
+.adminlog button{
+	width: 380px;
+	height: 40px;
+	background: #5e99e2;
+	border-radius: 10px;
+	border:none;
+	margin: 25px 0 0 35px;
+	color: white;
+	font-size: 20px;
+}
+.goreg{
+	width: 370px;
+	height: 12px;
+	margin: 5px 0 0 35px;
+	font-size: 12px;
+	text-align: right;
+}
+.adminregoper{
+	width: 380px;
+	margin: 10px 0 0 35px;
+	padding-left: 25px;
+}
+.adminlog div>input{
+	width: 120px;
+	height: 30px;
+	padding:0px;
+	margin-left:30px;
+	background: #5e99e2;
+	color: white;
+}
+/*左侧菜单栏*/
+.bacmenu{
+	margin-top: 10px;
+	width: 200px;
+	float: left;
+}
+.bacmenu input{
+	width: 181px;
+	height: 41px;
+	border: 2px solid #a45b00;
+	border-radius: 5px;
+	margin:0;
+	padding: 0 0 0 15px;
+}
+.bacmenu ul li{
+	width: 200px;
+	height: 35px;
+	margin-top: 10px;
+	border-radius: 5px;
+	background:#a45b00;
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	padding: 10px 0 0 0;
+}
+.bacmenu .colswit{
+	color: #422500;
+}
+.bacmenu .clearsty{
+	color: white;
+}
+h1 a{
+	color: #ffffff;
+}
+h1 a:hover{
+	color: #b5b5b5;
+}
+.bacmenu li> ul{
+	background: #dfbf95;
+	padding: 10px;
+	width: 170px;
+	margin: 10px 0 0 5px;
+	text-align: center;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+.bacmenu li>ul>li{
+	height: 25px;
+	width: 170px;
+	border-bottom: 2px dotted #ffffff;
+	margin-top: 5px;
+	background: none;
+}
+/*右侧列表栏*/
+.bacright{
+	margin-top: 10px;
+	width: 810px;
+	margin-left: 20px;
+	float: left;
+	border-radius: 5px;
+	background: #dfbf95;
+	min-height: 450px;
+}
+.bactit{
+	width: 100%;
+	height: 50px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom: 2px solid #ffffff;
+}
+h2{
+	font-size: 20px;
+	width: 200px;
+	height: 35px;
+	padding-top: 15px;
+	text-align: center;
+	border-right: 2px solid #ffffff;
+	border-top-left-radius: 5px;
+	background:#a45b00;
+	float: left;
+	color: #ffffff;
+}
+h3 a{
+	width: 575px;
+	height: 22px;
+	padding-top: 24px;
+	font-size: 14px;
+	color: #656565;
+	float: left;
+	text-align: right;
+}
+table{
+	width:760px;
+	margin-left: 25px;
+}
+table tr td{
+	height: 30px;
+	border-bottom: 2px dotted #ffffff;
+}
+table tr td input{
+	border-radius:5px;
+	border:1px solid #ffffff;
+	background:  #c07d36;
+	color: #ffffff;
+	font-size: 12px;
+	height: 20px;
+	width: 45px;
+	margin-left: 25px;
+}

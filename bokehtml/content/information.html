@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>博客主页</title>
+	<link rel="icon" href="../images/icon.ico">
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/rec.css">
+  <link rel="stylesheet" type="text/css" href="../css/reccon.css">
+  <link rel="stylesheet" type="text/css" href="../css/baccon.css">
+</head>
+<style type="text/css">
+    table tr td{
+      height: 30px;
+      border-bottom: 2px dotted #ffffff;
+    }
+</style>
+<body>
+<!--前端显示banner-->
+<div id="recban">
+    <div id="top">
+         <div class="ulogin">
+             <ul>
+                 <li><a href="">加入收藏 -</a></li>
+                 <li><a href="">登录 -</a></li>
+                 <li><a href="">注册</a></li>
+             </ul>
+         </div>
+    </div>
+</div>
+<!--前端显示middle-->
+<div id="recmid">
+    <div id="reclist">
+        <div id="listtit"><h2>用户信息</h2></div>
+        <div class="person">
+            <div class="infohead"><img src="../images/head.jpg"><input type="file" id="loadfiles" style="display: none;"></div>
+            <div class="infolist">
+                <table>
+                    <tr>
+                        <td width="65px"><h6>账号：</h6></td>
+                        <td><input type="text" name="username" id="adminUserName"></td>
+                    </tr>
+                    <tr>
+                        <td width="65px"><h6>ID号：</h6></td>
+                        <td><input type="text" name="username" id="adminUserId"></td>
+                    </tr>
+                    <tr>
+                        <td><h6>年龄：</h6></td>
+                        <td><input type="text" name="year" id="adminUserAge"></td>
+                    </tr>
+                    <tr>
+                        <td><h6>性别：</h6></td>
+                        <td><input type="text" name="sex" id="adminUserSex"></td>
+                    </tr>
+                    <tr>
+                        <td><h6>邮箱：</h6></td>
+                        <td><input type="text" name="email" id="adminUserEmail"></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="butt">
+                <input type="submit" name="giveup" value="放弃" onClick="javascript:history.back(-1);">
+                <input type="submit" name="sure" value="修改" onclick="alert('新建成功');">
+            </div>
+      </div>
+    </div>
+</div>
+<!--前端显示footer-->
+<div id="footer">我的博客 - 博客风格 - 博主信息 - 收藏此博客<br>XXXXXX版权所有 ©1997-2017</div>
+<!--前端显示侧边操作栏-->
+<div id="sidebar">
+	<ul>
+		<li><a href="../index.html">博客<br>首页</a></li>
+        <li>栏目<br>切换
+            <div id="menu">
+                <ul>
+                   <li><a href="">html+css</a></li>
+                  <li><a href="reclist.html">Javascript</a></li>
+                  <li><a href="">node.js</a></li>
+                  <li><a href="">Ajax</a></li>
+               </ul>
+            </div>
+        </li>
+        <li><a href="../admin/login.html">后台<br>管理</a></li>
+        <li><a href="content/information.html">修改<br>资料</a></li>
+        <li><a href="javascript:scroll(0,0)">返回<br>顶部</a></li>
+	</ul>
+</div>
+</body>
+</html>

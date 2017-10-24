@@ -1,0 +1,131 @@
+/*列表页*/
+#reclist{
+	width: 1280px;
+	height: 635px;
+	background: #dbeafa;
+	border-radius: 10px;
+	opacity: 0.85;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+}
+/*当前栏目名*/
+#listtit{	
+	width: 1280px;
+	height: 40px;
+	border-bottom: 2px solid #ffffff;
+}
+#listtit h2{
+	background:#5e99e2;
+	color: #ffffff;
+	border-top-left-radius: 10px;
+	font-size: 18px;
+	padding: 9px 0 9px 100px;
+	width: 200px;
+	height: 22px;
+	border-right: 2px solid #FFFFFF;
+	margin-top: -1px;
+}
+#listtit h3{
+	font-size: 16px;
+	height: 22px;
+	padding-right: 10px;
+	padding-top: 80px;
+	margin-top: -50px;
+}
+/*列表项*/
+#tab table{
+	width: 1200px;
+	margin: 10px 40px;
+}
+#tab table tr td{
+	height: 30px;
+	border-bottom: 2px dotted #ffffff;
+}
+/*详情页*/
+#recChildcon{
+	width: 1280px;
+	background: #b7d6f5;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+}
+h4{
+	width: 100%;
+	height:30px;
+	text-align: center;
+	font-size: 20px;
+	padding: 10px 0 0px 0;
+	border-bottom: 1px solid #ffffff;
+}
+h5{
+	width: 100%;
+	height: 10px;
+	text-align: center;
+	padding: 5px;
+	color: #a6a8a3;
+	font-weight:normal;
+}
+#listcontent{
+	width: 1200px;
+	margin: 15px 0 0 40px;
+	line-height: 24px;
+}
+/*个人信息页*/
+#person{
+	width: 1000px;
+	height: 500px;
+	margin: 50px auto;
+}
+#infohead{
+	width: 200px;
+	height: 250px;
+	float: left;
+	margin-top: 15px;
+}
+#infohead input{
+	width: 140px;
+	height:25px;
+	margin:10px 30px;
+	border-radius: 10px;
+	color: #ffffff;
+	background: #c2c2c2;
+	border:1px solid #c2c2c2;
+}
+#infolist{
+	float: left;
+	height:270px;
+	width: 800px;
+}
+#infolist table{
+	height:270px;
+	width: 750px;
+	margin-left: 50px;
+}
+#infolist table tr td{
+	height:20%;
+	margin: 0;
+	padding: 0;
+}
+h6{
+	font-size: 20px;
+	font-weight: normal;
+}
+#infolist  input{
+	width: 100%;
+}
+textarea{
+	width: 100%;
+	height: 150px;
+	background: url('../images/inputbg.jpg');
+	background-repeat: no-repeat;
+	background-color: #c4e5f4;
+}
+#butt input{
+	width: 140px;
+	height:25px;
+	margin:20px 170px;
+	border-radius: 10px;
+	color: #ffffff;
+	background: #5e99e2;
+	border:1px solid #5e99e2;
+}

@@ -1,0 +1,139 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+/*前台右侧*/
+#right{
+	width: 200px;
+	margin-top: 15px;
+	float: left;
+	background:#dbeafa;
+}
+h4{
+	width: 200px;
+	text-align: center;
+	height: 35px;
+	font-size: 22px;
+	padding-top: 10px;
+	background: #5e99e2;
+	color: #ffffff;
+	font-weight: normal;
+	border-bottom: 2px solid #3e84dc;
+	margin-bottom: 15px;
+}
+#right ul{
+	margin-bottom: 20px;
+}
+#right ul li{
+	width: 140px;
+	height: 20px;
+	border-bottom:1px dotted #5e99e2;
+	margin-left:25px;
+	padding: 5px;
+}
+#right img{
+	width: 150px;
+	height: 150px;
+	margin: 0 10px 0 25px;
+}
+/*前台左侧图文内容*/
+.imgcheck{
+	width: 1060px;
+	height: 450px;
+	margin:15px 0px;
+	background: url('../images/imgchebg.png');
+}
+#left{
+	margin-right: 20px;
+	width: 1060px;
+	float: left;
+}
+h1{
+	font-size: 16px;
+	width: 98%;
+	padding:5px 0 5px 20px;
+	border-bottom: 2px solid #3e84dc;
+}
+#toprc{
+	height: 350px;
+	overflow: hidden;
+	color: #000000;
+	padding: 0 0 0 15px;
+}
+/*前台middle列表*/
+#happy{
+	width: 1060px;
+	float: left;
+}
+#haptit{
+	background:#5e99e2;
+	width: 1060px;
+	height: 45px;
+	margin:0 0 0 0px;
+	border-bottom: 2px solid #ffffff;
+	border-radius: 5px;
+}
+#haptit h2{
+	font-size: 22px;
+	padding: 14px 0 14px 100px;
+	width: 200px;
+	height: 17px;
+	border-right: 2px solid #FFFFFF;
+	margin-top: -15px;
+}
+#haptit h3{
+	font-size: 16px;
+	height: 22px;
+	padding-right: 10px;
+	padding-top: 80px;
+	margin-top: -70px;
+}
+#haptit h2 a{
+	color: #ffffff;
+}
+#haptit h2,h3 a{
+	color: #ffffff;
+}
+#happy ul{
+	margin:0px -15px;
+}
+#happy ul li{
+	background: #75a4de;
+	width: 242px;
+	height: 300px;
+	float: left;
+	margin: 10px 15px;
+	border-radius: 5px;
+	color: #f3f3f3;
+}
+#happy ul li h1{
+	width: 220px;
+	height: 25px;
+	overflow: hidden;
+	margin:0 auto;
+	padding: 15px 5px 0 5px;
+	text-align: center;
+}
+#happy ul li h1 a{
+	color: #dbeafa;
+}
+#hapcon{
+	width:220px;
+	font-size: 12px;
+	margin:0 0 0 10px;
+	height: 240px;
+	overflow: hidden;
+}
+#happy ul li{
+	margin-bottom: 10px;
+}
+#read{
+	height: 20px;
+	width: 220px;
+	margin-top:-5px;
+	text-align: right;
+	font-size: 12px;
+}
+#read a{
+	color: #a4c8f9;
+}

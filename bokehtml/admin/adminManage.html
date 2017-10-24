@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>博客后台管理</title>
+	<link rel="icon" href="../images/icon.ico">
+    <link rel="stylesheet" type="text/css" href="../css/bac.css">
+</head>
+<script type="text/javascript">
+    window.onload=function(){
+        var id=window.location.search;
+        var Id=id.split("d");
+        console.log(Id[1])
+        if(Id[1]==undefined){
+            alert('抱歉，你需要先登录系统才可以管理博客哦');
+            window.location="adminLogin.html";
+        }
+    }
+</script>
+
+<body>
+<!--后台显示banner-->
+<div class="bacban">
+    
+    <div class="top">
+        <span id="yourname"></span>
+        <input type="button" name="" value="注销" id="adminclear"></div>
+
+</div>
+<!--后台显示mclassdle-->
+<div class="bacmid">
+    <!--后台操作菜单--> 
+    <div class="bacmenu">
+        <input type="text" name="" placeholder="文章搜索">
+        <ul id="adminmenu">
+            <li menukey="bokePreview">博客预览</li>
+            <li menukey="userOnlist" keynum="1">在册列表</li>
+            <li menukey="adminInformation" keynum="2">个人信息</li>
+            <li menukey="columnManage" keynum="3">栏目管理
+                 <ul>
+                    <li menukey="columnHtml"  keynum="4">html+css</li>
+                    <li menukey="columnJava" keynum="5">Javascript</li>
+                    <li menukey="columnNode" keynum="6">node.js</li>
+                    <li menukey="columnAjax" keynum="7">Ajax</li>
+                 </ul>
+            </li>
+        </ul>
+    </div>
+
+    <script type="text/javascript">
+        var adminmenu=document.getElementById('adminmenu');
+        var adminclear=document.getElementById('adminclear');
+        var yourname=document.getElementById('yourname');
+        var urlStr=window.location.search;
+        var us=urlStr.substring(1);
+        var arrUs=us.split('=');
+        arrUs[1];
+        yourname.innerHTML="管理员ID:"+localStorage.getItem('adminUserId')+",欢迎你的访问";
+        adminclear.onclick=function(e) {
+            localStorage.clear();
+            window.location="adminLogin.html";
+        }
+        adminmenu.onclick=function(e) {
+            var menuli=adminmenu.getElementsByTagName('li');
+            var target=e.target;
+            if(target.nodeName=='LI'){
+                var mkName=target.getAttribute('menukey');
+                var keynum=target.getAttribute('keynum');
+                jumpJudge(mkName);
+            } 
+        }
+        function jumpJudge(attr){
+            switch(attr){
+                case 'bokePreview':
+                    window.location='../blogindex.html'
+                    break;
+                case 'userOnlist' :
+                    ajaxJump('ajax/userOnlist.html','js/userOnlist.js');
+                    break;
+                case 'adminInformation':
+                    ajaxJump('ajax/adminInformation.html','js/adminInformation.js');
+                    break;
+                case 'columnManage':
+                    break;
+                case 'columnHtml':
+                    ajaxJump('ajax/columnHtml.html','js/columnHtml.js');
+                    break;
+                case 'columnJava':
+                    ajaxJump('ajax/columnJava.html','js/columnJava.js');
+                    break;
+                case 'columnNode':
+                    ajaxJump('ajax/columnNode.html','js/columnNode.js');
+                    break;
+                case 'columnAjax':
+                    ajaxJump('ajax/columnAjax.html','js/columnAjax.js');
+                    break;
+            }
+        }
+
+        function ajaxJump(uri,urijs){
+            var menuContent=document.getElementById('menuContent');
+            var xhr=new XMLHttpRequest();
+            xhr.open('GET',uri);
+            xhr.setRequestHeader('Content-type','text/html');
+            xhr.send(null);
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState===4 &&xhr.status===200){
+                    var message=xhr.responseText;
+                    var myScript=document.createElement('script');
+                    myScript.type='text/javascript';
+                    myScript.src=urijs;
+                    menuContent.innerHTML=message;
+                    menuContent.appendChild(myScript);
+                }
+            }
+        }
+    </script>
+
+    <div class="bacright" id="menuContent">
+
+    </div>
+</div>
+</body>
+</html>

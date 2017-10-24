@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+	<title>欢迎登录博客后台管理</title>
+	<link rel="icon" href="../images/icon.ico">
+	<link rel="stylesheet" type="text/css" href="../css/bac.css">
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+</head>
+<style type="text/css">
+    body{
+        background: #5e99e2;
+    }
+</style>
+<body>
+    <div class="adminlog">
+        <div class="adminlogtit">
+	        <img src="../images/logo.png">
+	        <div class="adminwel">
+		        <h5>欢 迎 注 册 博 客 管 理 后 台</h5>
+		        <h6>Welcome to The Blog Background Management</h6>
+	        </div>
+        </div>
+        <input type="text" name="" id="adminUserName" placeholder="请输入你的账号ID">
+        <input type="text" name="" id="adminUserId" placeholder="请输入你的账号名称">
+        <input type="password" name="" id="adminUserPwd" placeholder="请输入你的账号密码">
+        <div class="adminregoper"><input type="reset" name="" id="adminregrs" value="重置"><input type="button" name="" value="提交" id="adminregbtn"></div>
+    </div>
+    <script type="text/javascript">
+        var adminUserId=document.getElementById('adminUserId');
+        var adminUserName=document.getElementById('adminUserName');
+        var adminUserPwd=document.getElementById('adminUserPwd');
+        var adminregrs=document.getElementById('adminregrs');
+        var adminregbtn=document.getElementById('adminregbtn');
+
+        adminregbtn.onclick=function() {
+            var adminUser={
+                adminUserId:adminUserId.value,
+                adminUserName:adminUserName.value,
+                adminUserPwd:adminUserPwd.value
+            };
+            var xhr=new XMLHttpRequest();
+            xhr.open('POST','/adminregister');
+            xhr.setRequestHeader('Content-Type','application/json');
+            console.log(adminUser)
+            xhr.send(JSON.stringify(adminUser));
+            xhr.onreadystatechange=function(){
+                if (xhr.readyState===4&&xhr.status===200) {
+                    var adminregmes=xhr.responseText;
+                    console.log(JSON.parse(adminregmes));
+                    if (JSON.parse(adminregmes).code==100) {
+                        alert('恭喜你，注册成功，你可以开始管理博客啦！');
+                        window.location='adminlogin.html';
+                    }else if (JSON.parse(adminregmes).code==102) {
+                        alert('抱歉，该账号已存在，请重新注册！');
+                    }else{
+                        alert('发生了未知错误，请稍后重试！');
+                    }
+                }
+            }
+            adminregrs.click();
+        }
+    </script>
+</body>
+</html>
