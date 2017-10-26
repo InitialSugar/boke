@@ -19,5 +19,5 @@ app.post('/tpmdata',multipartMiddleware,function(req,res){
 	res.json({src:req.files.myfile.path});
 });
 app.listen('8080',function(){
-	console.log('服务器启动成功')
+	console.log('服务器启动成功，端口号8080')
 })

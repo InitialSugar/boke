@@ -35,6 +35,15 @@ exports.adminregister=function(req,res){
 	});
 	console.log(req.body);
 }
+exports.aaaa = function(req,res){
+	Adminuser.find({},function(err,doc){
+		if(err){
+			console.log(err)
+		}
+		else{
+			console.log(doc)
+		}
+	})
 }
 /*管理员登录*/
 exports.adminlogin=function(req,res){

@@ -1,4 +1,4 @@
-.registernow{
+#registernow{
 	width: 700px;
 	height: 487px;
 	top: 0px;
@@ -24,4 +24,41 @@
 	margin: 20px 0 0 230px;
 	width: 275px;
 	height: 75px;
+}
+.userInp{
+	width:400px;
+	margin: 50px auto 0 auto;
+}
+.userInp>p{
+	margin: 20px 0;
+	width: 385px;
+	height:35px;
+	background: white;
+	line-height: 35px;
+	padding: 0 0 0 15px;
+	border-radius: 5px;
+}
+.userInp>p>input{
+	border:none;
+	outline:none;
+	width: 320px;
+}
+.userInpMenu{
+	width: 400px;
+	margin: 0 auto;
+	padding:0 5px;
+}
+.userInpMenu>input{
+	width: 195px;
+	height: 35px;
+	border: none;
+	outline: none;
+	background: #ddd;
+	border-radius: 5px;
+	text-align: center;
+}
+.userInpMenu input:hover{
+	background: #6298f9;
+	border:2px solid white;
+	color: white;
 }

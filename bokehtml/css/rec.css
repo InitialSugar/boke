@@ -35,13 +35,17 @@ h4{
 	width: 150px;
 	height: 150px;
 	margin: 0 10px 0 25px;
+	border-radius: 15px;
+}
+#right>p{
+	width: 140px;
+	margin: 0 auto;
 }
 /*前台左侧图文内容*/
 .imgcheck{
 	width: 1060px;
 	height: 450px;
 	margin:15px 0px;
-	background: url('../images/imgchebg.png');
 }
 #left{
 	margin-right: 20px;

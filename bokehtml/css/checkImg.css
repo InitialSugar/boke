@@ -1,0 +1,32 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.checkImg{
+	width: 1060px;
+	height: 450px;
+}
+#imgList{
+	position: relative;
+	z-index: 1;
+}
+#imgList>li{
+	position: absolute;
+	opacity: 0;
+}
+#dot{
+	width: 230px;
+	list-style: none;
+	position: relative;
+	z-index: 10;
+	margin:0 auto 0 auto;
+	padding-top:420px; 
+}
+#dot>li{
+	width: 15px;
+	height: 15px;
+	background: #9ec9ff;
+	float: left;
+	margin: 0 15px;
+	border-radius: 25px;
+}

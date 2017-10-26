@@ -4,8 +4,10 @@
 <head>
 	<title>博客主页</title>
 	<link rel="icon" href="images/icon.ico">
+    <link rel="stylesheet" type="text/css" href="css/checkImg.css">
 	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<link rel="stylesheet" type="text/css" href="css/rec.css">
+    <link rel="stylesheet" type="text/css" href="css/reg.css">
 </head>
 <body>
 
@@ -16,7 +18,7 @@
              <ul>
                  <li><a href="javascript:AddFavorite('www.baidu.com','Initial')">加入收藏 -</a></li>
                  <li><a href="javascript:;" onclick="loginingnow();">登录 -</a></li>
-                 <li><a href="">注册</a></li>
+                 <li><a href="javascript:;" onclick="registernow();">注册</a></li>
              </ul>
          </div>
     </div>
@@ -24,7 +26,25 @@
 <!--前端显示middle-->
 <div id="recmid">
 <div id="left">
-    <div class="imgcheck"></div>
+    <div class="imgcheck">
+        <div class="checkImg">
+        <ul id="imgList">
+            <li style="opacity: 0"><img src="./images/2.png"></li>
+            <li style="opacity: 0"><img src="./images/2.png"></li>
+            <li style="opacity: 0"><img src="./images/3.png"></li>
+            <li style="opacity: 0"><img src="./images/4.png"></li>
+            <li style="opacity: 0"><img src="./images/5.png"></li>
+        </ul>
+        <ul id="dot">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <script type="text/javascript" src="./js/checkImg.js"></script>
+    </div>
     <div id="happy">
         <div id="haptit"><table width="100%" height="60px"><tr><td width="200px"><h2><a href="">最近更新</a></h2></td><td style="text-align: right;"><h3><a href="content/reclist.html">>>more</a></h3></td></tr></table></div>
     	<ul>
@@ -83,37 +103,22 @@
     <h4>博主信息</h4>
     <img src="images/head.jpg">
     <ul>
-        <li>昵称：web前端</li>
+        <li>昵称：小糖豆</li>
         <li>年龄：22</li>
         <li>性别：女</li>
-        <li>Q  Q：12121212</li>
+        <li>Q  Q：1290862865</li>
     </ul>
     <h4>趣博推荐</h4>
     <ul>
-        <li>为情所困</li>
-        <li>世界只因有你</li>
-        <li>她说我死老头子</li>
-        <li>再回首恍然如梦</li>
-        <li>为情所困</li>
-        <li>世界只因有你</li>
-        <li>她说我死老头子</li>
-        <li>再回首恍然如梦</li>
+        <li onclick='window.location.href="http://luolonghao.iteye.com/?utm_source=caibaojian.com"'>罗龙浩</li>
+        <li>......</li>
     </ul>
     <h4>博客声明</h4>
-    <ul>
-        <li>为情所困</li>
-        <li>世界只因有你</li>
-        <li>她说我死老头子</li>
-        <li>再回首恍然如梦</li>
-        <li>为情所困</li>
-        <li>世界只因有你</li>
-        <li>她说我死老头子</li>
-        <li>再回首恍然如梦</li>
-    </ul>
+    <p>该博客用于发布博主关于技术的一些个人简介，该版本只是最初版本，后期还在继续完善中，很多功能还未完善。</p>
 </div>
 </div>
 <!--前端显示footer-->
-<div id="footer">我的博客 - 博客风格 - 博主信息 - 收藏此博客<br>XXXXXX版权所有 ©1997-2017</div>
+<div id="footer">我的博客 - 博客风格 - 博主信息 - 收藏此博客<br>小糖豆版权所有 ©1997-2017</div>
 <!--前端显示侧边操作栏-->
 <div id="sidebar">
 	<ul>
@@ -132,8 +137,9 @@
         <li><a href="javascript:scroll(0,0)">返回<br>顶部</a></li>
 	</ul>
 </div>
-<!-- 登录弹框 -->    
+    <!-- 遮罩层 -->
     <div id="shade" style="display: none;"></div>
+    <!-- 登录弹框 -->  
     <div id="logining" style="display: none;">
         <div id="loginhead"><img src="./images/head.jpg"></div>
         <div id="sanjiao"></div>
@@ -147,10 +153,23 @@
             </div>
             <div id="loginuser" ><button>登录</button> </div>
             <div id="closeLogin"><img src="./images/close.png" style="width: 40px;"></div>
-            
         </div>
     </div>
-
+    <!--注册页面-->
+    <div id="registernow" style="display: none;">
+        <div class="registerinfo">
+            <img src="images/myblog.png" class="myblogtitle">
+            <div class="userInp">
+                <p>账号：<input type="text" name="" placeholder="请输入你的账号ID"></p>
+                <p>昵称：<input type="text" name="" placeholder="请输入你的昵称"></p>
+                <p>密码：<input type="text" name="" placeholder="请输入你的密码"></p>
+            </div>
+            <div class="userInpMenu">
+                <input type="button" name="" value="取消" id="backing">
+                <input type="button" name="" value="提交" id="subMit">
+            </div>   
+        </div>
+    </div>
 <script type="text/javascript" src="./js/index.js"></script>
 </body>
 </html>

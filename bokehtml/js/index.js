@@ -26,3 +26,18 @@
         logining.style.display='none';
         shade.style.display='none';
     }
+
+    // 注册
+    function registernow(){
+        var registering=document.getElementById('registernow');
+        registering.style.display='block';
+        shade.style.display='block';
+    }
+
+    // 取消注册
+    var backNow=document.getElementById('backing');
+    backNow.onclick=function(){
+        var registering=document.getElementById('registernow');
+        registering.style.display='none';
+        shade.style.display='none';
+    }
